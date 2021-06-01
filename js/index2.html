@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link src="sytlesheet" href="/css/styles.css">
+     <style>
+        body {
+            text-align: center;
+        }
+        .button {
+            background-color: blanchedalmond;
+        }
+        #htmlButton1 {
+            font-weight: bold;
+            margin: 2rem;
+        }
+        /* #htmlButton2 {
+            font-style: italic;
+            margin: rem;
+        } */
+        #buttonId {
+            font-weight: bold;
+            color: red;
+            background-color:blanchedalmond;
+            margin: 2rem;
+        }
+        .node {
+            font-weight: bold;
+            color: rgb(138, 13, 157);
+            background-color:blanchedalmond;
+            margin: 2rem;
+        }
+        #jsButton {
+            font-weight: bold;
+            font-style: italic;
+            color: white;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <p id="demo"></p>
+    <div>
+        <button id="htmlButton1" class="button">Press Me!</button>
+      
+        <button onclick="myFunction()" class="node">Enter your Name</button>
+    
+        <button ondblclick="myalert()" class="node">Show Alert Message</button>
+        <button id="buttonId" class ="buttonClass">Click me</button>
+    </div>
+    <div>
+        <button onclick="myFunction()" class="node">Confirm</button>
+    </div>
+
+
+    <script>
+        function myFunction() {
+          confirm("Press a button!");
+        }
+        </script>
+        <!-- confirmation script -->
+    <script>
+            function myFunction() {
+              var person = prompt("Please enter your name", "Mike L");
+              if (person != null) {
+                document.getElementById("demo").innerHTML =
+                "Hello " + person + "! How are you today?";
+              }
+            }
+    </script>
+            
+
+    <script>
+        // creating an alert with double click
+        function myalert() {
+        alert("This is the Alert Message!");
+        }
+    </script>
+
+        <!-- this Button brings up an alert message  -->
+    <script>
+        var pressedButton = document.getElementsByTagName("Button") [0];
+        pressedButton.addEventListener("click", function (event) {
+            alert("You have pressed the button . . . .")
+        })
+    </script>
+
+
+    <script>
+        var clickMeButton = document.createElement('button');
+        // clickMeButton.innerHTML = 'home';
+        clickMeButton.innerHTML = 'This is my new Home button!';
+        clickMeButton.id = 'jsButton';
+        clickMeButton.className = 'button'
+        clickMeButton.style.background = 'red';
+        // clickMeButton.className = 'myStyleClassName'
+        document.body.appendChild(clickMeButton);
+        // get the element with the id='htmlButton1'
+        var htmlButton2 = document.getElementById(htmlButton2);
+        // modify the text label for htmlButton2
+        htmlButton2.innerHTML = 'I\'m a modified HTML button!';        
+    </script>
+
+    <!-- this button gives a new message when clicked -->
+    <script>
+        var btn = document.getElementById("buttonId");
+
+        btn.addEventListener("click", function() {
+            btn.innerHTML = 'You clicked me!'; 
+        });
+    </script>
+        
+ 
+</body>
+</html>
